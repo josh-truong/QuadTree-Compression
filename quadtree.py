@@ -112,7 +112,7 @@ class QuadTree():
         
 
 if __name__ == '__main__':
-    image_name = "GOT.jpg"
+    image_name = "GOT.jpg"   # Image name here
 
     # load image
     im = Image.open("images/{0}".format(image_name))
@@ -121,15 +121,8 @@ if __name__ == '__main__':
     qtree = QuadTree(im)
 
     # save image/gif
-    im_non_outlined = qtree.create_image(qtree.tree_height)
-    im_outlined = qtree.create_image(qtree.tree_height-3, show_lines=True)
-
-    im = Image.new('RGB', (qtree.width*2, qtree.height))
-    im.paste(im_non_outlined, (0,0))
-    im.paste(im_outlined, (qtree.width,0))
+    im = qtree.create_image(qtree.tree_height, show_lines=True)
     im.save("output/{0}.png".format(os.path.splitext(image_name)[0]))
-
-
-    # qtree.create_gif("output/{0}.gif".format(os.path.splitext(image_name)[0]), show_lines=True)
+    qtree.create_gif("output/{0}.gif".format(os.path.splitext(image_name)[0]), show_lines=True)
     
     # im.show()
