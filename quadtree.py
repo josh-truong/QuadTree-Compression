@@ -112,7 +112,7 @@ class QuadTree():
         
 
 if __name__ == '__main__':
-    image_name = "GOT.jpg"   # Image name here
+    image_name = ""   # Image name here
 
     # load image
     im = Image.open("images/{0}".format(image_name))
