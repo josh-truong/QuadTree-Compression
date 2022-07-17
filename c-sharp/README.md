@@ -1,9 +1,9 @@
 ### How to use QuadTree.cs
 
 ```cs
-string filename_i = "cosmic_cliffs.jpg";
-string filename_o = "out.png";
-string filepath = "";
+string filename_i = "cosmic_cliffs.jpg"; // input of filename
+string filename_o = "out.png"; // output of filename
+string filepath = ""; // Add filepath of image
 string filepath_i = String.Format("{0}/{1}", filepath, filename_i);
 string filepath_o = String.Format("{0}/{1}", filepath, filename_o);
 
